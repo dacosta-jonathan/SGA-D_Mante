@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class ChronoUI: MonoBehaviour
 {
+    [SerializeField] GameManager gameManager;
+
     [SerializeField] private TextMeshProUGUI chronoText;
-    [SerializeField] private float timeToLose = 120.0f;
-    [SerializeField] private int gameOverSceneIndex = 1;
     private float chrono = 0;
 
-    private void Awake()
+    private void Start()
     {
-        chrono = timeToLose;
+        chrono = gameManager.timeToLose;
     }
 
     void Update()
@@ -23,14 +23,9 @@ public class ChronoUI: MonoBehaviour
         {
             chrono = 0;
             chronoText.text = chrono.ToString("0.#");
-            GameOver();
+            gameManager.GameOver();
         }
 
         chronoText.text = chrono.ToString("0.#");
-    }
-
-    void GameOver()
-    {
-        SceneManager.LoadScene(gameOverSceneIndex);
     }
 }

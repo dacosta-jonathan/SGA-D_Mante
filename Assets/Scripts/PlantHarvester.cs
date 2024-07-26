@@ -7,8 +7,8 @@ using UnityEngine;
 public class PlantHarvester : MonoBehaviour
 {
     //SAC
-    
-    [SerializeField] TextMeshProUGUI AfficheNbFeuilleJauneSac;  
+
+    [SerializeField] TextMeshProUGUI AfficheNbFeuilleJauneSac;
     int leafCountGreen = 0;
 
     [SerializeField] TextMeshProUGUI AfficheNbFeuilleVerteSac;
@@ -17,7 +17,8 @@ public class PlantHarvester : MonoBehaviour
     [SerializeField] TextMeshProUGUI AfficheNbFeuilleBleuSac;
     int leafCountBlue = 0;
 
-    
+
+    coffeshop nearbyShop;
 
     PlantBehaviour nearbyPlant;
 
@@ -32,6 +33,14 @@ public class PlantHarvester : MonoBehaviour
                 nearbyPlant = plantBehaviour;
             }
         }
+
+        if (other.gameObject.CompareTag("CoffeeShop"))
+        {
+            if (other.gameObject.TryGetComponent(out coffeshop cs))
+            {
+                nearbyShop = cs;
+            }
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -44,19 +53,47 @@ public class PlantHarvester : MonoBehaviour
             }
         }
 
+        if (nearbyShop && other.gameObject.CompareTag("CoffeeShop"))
+        {
+            nearbyShop = null;
+        }
     }
 
     private void Update()
     {
-        bool keyCollect = Input.GetKey(KeyCode.E);
+        bool interact = Input.GetKey(KeyCode.E);
 
-        if (keyCollect && !oldKeyCollect)
+        if (interact && nearbyPlant != null && !oldKeyCollect)
         {
             Harvest();
         }
 
-        oldKeyCollect = keyCollect;
+        if (interact && nearbyShop != null && !oldKeyCollect)
+        {
+            DropBag();
+        }
 
+        oldKeyCollect = interact;
+
+    }
+
+    void DropBag() 
+    {
+        if (nearbyShop)
+        {
+            Dictionary<PlantBehaviour.PlantType, int> bag = new();
+            bag[PlantBehaviour.PlantType.Green] = leafCountGreen;
+            bag[PlantBehaviour.PlantType.Yellow] = leafCountYellow;
+            bag[PlantBehaviour.PlantType.Blue] = leafCountBlue;
+            nearbyShop.Deposit(bag);
+            leafCountGreen = 0;
+            leafCountYellow = 0;
+            leafCountBlue = 0;
+
+            AfficheNbFeuilleVerteSac.text = leafCountGreen.ToString();
+            AfficheNbFeuilleJauneSac.text = leafCountYellow.ToString();
+            AfficheNbFeuilleBleuSac.text = leafCountBlue.ToString();
+        }
     }
 
     void Harvest()
