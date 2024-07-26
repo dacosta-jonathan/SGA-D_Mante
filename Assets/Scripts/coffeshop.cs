@@ -1,7 +1,7 @@
-using System.Collections;
+
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Experimental.GraphView;
+
 using UnityEngine;
 
 public class coffeshop : MonoBehaviour
@@ -27,13 +27,17 @@ public class coffeshop : MonoBehaviour
     private Dictionary<PlantBehaviour.PlantType, int> recipe = new ();
 
     public void GenerateNewRecipe()
-    { 
+    {
+        recipe.Clear();
         for (int i = 0; i < 3; i++)
         {
             PlantBehaviour.PlantType plantType = (PlantBehaviour.PlantType)Random.Range(0,3);
-            if(recipe.TryGetValue(plantType, out int number)){
-                recipe[plantType] += number;
-            } else {
+            if (recipe.ContainsKey(plantType))
+            {
+                recipe[plantType] += 1;
+            }
+            else
+            {
                 recipe[plantType] = 1;
             }
         }
@@ -66,7 +70,8 @@ public class coffeshop : MonoBehaviour
 
         if (isValid)
         {
-            GenerateNewRecipe();
+            gameManager.Win();
+            //GenerateNewRecipe();
         }
 
         return isValid;

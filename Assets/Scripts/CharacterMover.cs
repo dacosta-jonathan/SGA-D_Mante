@@ -11,6 +11,8 @@ public class CharacterMover : MonoBehaviour
     [SerializeField] float hurtTotalTime = 1.0f;
     [SerializeField] private LayerMask rayCastMask;
 
+    [SerializeField] private Animator animator;
+
     Vector3 finalPos;
     Rigidbody rb;
     bool isMoving = false;
@@ -61,6 +63,8 @@ public class CharacterMover : MonoBehaviour
         {
             isHurt = false;
         }
+
+        animator.SetFloat("speed", rb.velocity.magnitude);
     }
 
     public void Hurt()
@@ -86,7 +90,7 @@ public class CharacterMover : MonoBehaviour
     private Vector3 ReturnRaycastPositionOnClick()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit raycastHit, 99999.9f, rayCastMask.value))
+        if (Physics.Raycast(ray, out RaycastHit raycastHit, Mathf.Infinity, rayCastMask.value))
         {
             //if (raycastHit.collider.CompareTag("Ground"))
             {

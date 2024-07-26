@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] public float timeToLose = 10.0f;
     [SerializeField] private int gameOverSceneIndex = 2;
+    [SerializeField] private int winSceneIndex = 3;
 
 
     void Start()
@@ -21,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     public void Win()
     {
-
+        SceneManager.LoadScene(winSceneIndex);
     }
 
     public void GameOver()

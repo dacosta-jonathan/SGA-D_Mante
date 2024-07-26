@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 3248584111178210509, guid: 61d21b7c1e3451c4e937badce62b8c14, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 68d2072593fb84043b56e09f68bc5b6c, type: 3}
+      objectReference: {fileID: 21300000, guid: fb6ac1260ee77f049a0f3d18999e9205, type: 3}
     - target: {fileID: 3946734543515153543, guid: 61d21b7c1e3451c4e937badce62b8c14, type: 3}
       propertyPath: m_Name
       value: PanelfeuilleJaune
@@ -26,27 +26,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5057606195749367340, guid: 61d21b7c1e3451c4e937badce62b8c14, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5057606195749367340, guid: 61d21b7c1e3451c4e937badce62b8c14, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5057606195749367340, guid: 61d21b7c1e3451c4e937badce62b8c14, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5057606195749367340, guid: 61d21b7c1e3451c4e937badce62b8c14, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5057606195749367340, guid: 61d21b7c1e3451c4e937badce62b8c14, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 190.6
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5057606195749367340, guid: 61d21b7c1e3451c4e937badce62b8c14, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 55.8
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5057606195749367340, guid: 61d21b7c1e3451c4e937badce62b8c14, type: 3}
       propertyPath: m_LocalPosition.x
@@ -78,11 +78,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5057606195749367340, guid: 61d21b7c1e3451c4e937badce62b8c14, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5057606195749367340, guid: 61d21b7c1e3451c4e937badce62b8c14, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5057606195749367340, guid: 61d21b7c1e3451c4e937badce62b8c14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -114,10 +114,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3935919488102644897}
     m_Modifications:
-    - target: {fileID: 3248584111178210509, guid: 61d21b7c1e3451c4e937badce62b8c14, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 00dabbb6d2fcb994db4aeabb35e6028c, type: 3}
     - target: {fileID: 3946734543515153543, guid: 61d21b7c1e3451c4e937badce62b8c14, type: 3}
       propertyPath: m_Name
       value: PanelfeuilleBleu
@@ -336,7 +332,7 @@ PrefabInstance:
     - target: {fileID: 3248584111178210509, guid: 61d21b7c1e3451c4e937badce62b8c14, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 11f8ba52c0dd48743a7144dddc865f18, type: 3}
+      objectReference: {fileID: 21300000, guid: 877046257ff66114f90ad1f9eee9a4e2, type: 3}
     - target: {fileID: 3946734543515153543, guid: 61d21b7c1e3451c4e937badce62b8c14, type: 3}
       propertyPath: m_Name
       value: PanelfeuilleVerte
