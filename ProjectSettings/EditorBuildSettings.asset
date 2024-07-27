@@ -9,11 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenuScene.unity
     guid: 8727a244bda83024b82517c54aa61c64
   - enabled: 1
+    path: Assets/Scenes/NarrationScene1.unity
+    guid: 36834e5491f5fca438885e7c26455f45
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: bd01d8d1c2a6c6246ba8f548e4eb6787
+  - enabled: 1
+    path: Assets/Scenes/NarrationScene1 1.unity
+    guid: fce6057e9eb36e04d82f8addfe735e55
   - enabled: 1
     path: Assets/Scenes/WinScene.unity
     guid: 235d14d2ceb829f43b8d25bde11a0c9a

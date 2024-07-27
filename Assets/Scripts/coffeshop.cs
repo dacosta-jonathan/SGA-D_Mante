@@ -15,6 +15,8 @@ public class coffeshop : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI AfficheNbFeuilleBleu;
 
+    [SerializeField] AudioController audioController;
+
     Dictionary<PlantBehaviour.PlantType, TextMeshProUGUI> AfficheNbFeuilleSac = new();
 
     private void Awake()
@@ -66,6 +68,11 @@ public class coffeshop : MonoBehaviour
         foreach (var (plantType, number) in recipe)
         {
             isValid = (number <= bag[plantType]) && isValid;
+        }
+
+        if (audioController != null)
+        {
+            audioController.PlaySound(AudioManager.Effects.Cashing);
         }
 
         if (isValid)

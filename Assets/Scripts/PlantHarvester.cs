@@ -31,6 +31,8 @@ public class PlantHarvester : MonoBehaviour
 
     public PlantBehaviour NearbyPlant { get => nearbyPlant; }
 
+    [SerializeField] AudioController audioController;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Plant"))
@@ -90,6 +92,11 @@ public class PlantHarvester : MonoBehaviour
 
     void DropBag() 
     {
+        if (audioController != null)
+        {
+            audioController.PlaySound(AudioManager.Effects.Cashing);
+        }
+
         if (nearbyShop)
         {
             Dictionary<PlantBehaviour.PlantType, int> bag = new();
@@ -109,13 +116,10 @@ public class PlantHarvester : MonoBehaviour
 
     void Harvest()
     {
-
-        /*if (nearbyPlant)
+        if(audioController != null)
         {
-            nearbyPlant.plantType
-            leafCount += nearbyPlant.CollectLeaf();
-            textMeshProUGUI.text = leafCount.ToString();
-        } */
+            audioController.PlaySound(AudioManager.Effects.Collect);
+        }
 
         if (nearbyPlant)
         {

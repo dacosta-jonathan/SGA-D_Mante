@@ -207,10 +207,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 69.25
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -555,6 +555,7 @@ GameObject:
   - component: {fileID: 431340169}
   - component: {fileID: 431340168}
   - component: {fileID: 431340167}
+  - component: {fileID: 431340170}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -577,10 +578,10 @@ RectTransform:
   - {fileID: 54350511}
   m_Father: {fileID: 326394092}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 206, y: 76}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.71081686, y: 0.6767675}
+  m_AnchorMax: {x: 0.9256178, y: 0.7493488}
+  m_AnchoredPosition: {x: -0.5, y: 0.5}
+  m_SizeDelta: {x: -1, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &431340167
 MonoBehaviour:
@@ -638,6 +639,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 431340170}
+        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &431340168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -676,6 +689,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431340165}
   m_CullTransparentMesh: 1
+--- !u!114 &431340170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431340165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b31e323846743742b6fb7f7b566cf03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &571994081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 571994083}
+  - component: {fileID: 571994082}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &571994082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571994081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45bb66ae03af6314a99d9a0d94528000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuSong: {fileID: 8300000, guid: 74f4bd093db9e5943bcb9b480a83ce2b, type: 3}
+  PlaySong: {fileID: 8300000, guid: 4074211ebd6543c4b90f13b70e159686, type: 3}
+  Bird: {fileID: 8300000, guid: 59c9875d5a933514eb13cff8f0855bff, type: 3}
+  ButtonPress: {fileID: 8300000, guid: 0778121659b80c140b98bffb8986bfb3, type: 3}
+  ButtonStart: {fileID: 8300000, guid: db8265941abdf1a429542b1d33080b1a, type: 3}
+  MenuDeplacement: {fileID: 8300000, guid: 79327c0f7ae70e142a39c7d931d771c4, type: 3}
+  Wound: {fileID: 8300000, guid: 660e529f61e092a4ca77df92e148d8a1, type: 3}
+  Collect: {fileID: 8300000, guid: b0df07ad16a1d064fbe7f7edcb5fa7e7, type: 3}
+  Walk: {fileID: 8300000, guid: 34bff97ef6be0a146958b13784a1dc7f, type: 3}
+  Thunder: {fileID: 8300000, guid: 150ffdd2e01092e46b7c6f50d840b73e, type: 3}
+  Cashing: {fileID: 8300000, guid: 13dc3741fd49aa647b17e93e3ae4d515, type: 3}
+  Rain: {fileID: 8300000, guid: 1bc4a0c15647a6a41a900797814cb7ee, type: 3}
+  Chocked: {fileID: 8300000, guid: e2248ac4b6a973640b3bb43acf908c1d, type: 3}
+  Bite: {fileID: 8300000, guid: 4cc7e9589d3e0864aa0f8c4267c491db, type: 3}
+  TalkUpF: {fileID: 8300000, guid: 87355522d95b9a34d95911748a398e65, type: 3}
+  TalkDownF: {fileID: 8300000, guid: 445ccf9d9d3c0f0468a500934c5a1bfd, type: 3}
+  MisterEnter: {fileID: 8300000, guid: 5e3d683d9f99ca945a86e2f6e9a5b81a, type: 3}
+  TalkUpM: {fileID: 8300000, guid: e4474ef90921df540af39ce1e282e3c4, type: 3}
+  TalkDownM: {fileID: 8300000, guid: f9df7f9f1c36ded409e5b16644811322, type: 3}
+  numberOfSoundMax: 16
+--- !u!4 &571994083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571994081}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 878.16705, y: 518.57635, z: -6.911392}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2048937074
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,10 +865,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 326394092}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 310, y: -11}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.71081686, y: 0.43934885}
+  m_AnchorMax: {x: 0.919, y: 0.54432565}
+  m_AnchoredPosition: {x: 0.5, y: -0.44999695}
+  m_SizeDelta: {x: -1.5052032, y: 0.8998985}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2117960153
 MonoBehaviour:
@@ -828,15 +917,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 50.4
+  m_fontSizeBase: 30
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -864,7 +953,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -35.645264, y: 0, z: 129.74841, w: 0}
+  m_margin: {x: -1.6329956, y: 0, z: 0.12670898, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -884,3 +973,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 326394092}
   - {fileID: 2048937077}
+  - {fileID: 571994083}

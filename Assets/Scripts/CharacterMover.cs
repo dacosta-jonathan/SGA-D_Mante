@@ -13,6 +13,8 @@ public class CharacterMover : MonoBehaviour
 
     [SerializeField] private Animator animator;
 
+    [SerializeField] AudioController audioController;
+
     Vector3 finalPos;
     Rigidbody rb;
 
@@ -33,9 +35,13 @@ public class CharacterMover : MonoBehaviour
         finalPos = transform.position;
     }
 
+    const float moveAudioTime = 1.56f;
+    float timer = 0;
+
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
         if (Input.GetMouseButtonDown(0))
         {
             finalPos = ReturnRaycastPositionOnClick();
@@ -46,6 +52,14 @@ public class CharacterMover : MonoBehaviour
         
         if (isMoving)
         {
+            if (audioController != null)
+            {
+                if(timer >= moveAudioTime)
+                {
+                    audioController.PlaySound(AudioManager.Effects.Walk);
+                    timer = 0;
+                }
+            }
             Vector3 positionToTarget = (finalPos - transform.position);
 
             rb.velocity = positionToTarget.normalized * (isHurt ? hurtSpeed : Vit);
@@ -74,6 +88,10 @@ public class CharacterMover : MonoBehaviour
     {
         isHurt = true;
         hurtTimer = hurtTotalTime;
+        if (audioController != null)
+        {
+            audioController.PlaySound(AudioManager.Effects.Wound);
+        }
     }
 
     //private void OnDrawGizmos()

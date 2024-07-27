@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
 {
-    [SerializeField] int mainMenuSceneIndex = 0;
+    [SerializeField] int mainMenuSceneIndex = 2;
 
     public void LoadMainMenu()
     {
