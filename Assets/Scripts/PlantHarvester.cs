@@ -7,6 +7,11 @@ using UnityEngine;
 public class PlantHarvester : MonoBehaviour
 {
     //SAC
+    private bool firstPick = false;
+    public bool FirstPick { get => firstPick; set => firstPick = value; }
+
+    private bool firstDeposit = false;
+    public bool FirstDeposit { get => firstDeposit; set => firstDeposit = value; }
 
     [SerializeField] TextMeshProUGUI AfficheNbFeuilleJauneSac;
     int leafCountGreen = 0;
@@ -24,13 +29,17 @@ public class PlantHarvester : MonoBehaviour
 
     bool oldKeyCollect = false;
 
+    public PlantBehaviour NearbyPlant { get => nearbyPlant; }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Plant"))
         {
+
             if (other.gameObject.TryGetComponent(out PlantBehaviour plantBehaviour))
             {
                 nearbyPlant = plantBehaviour;
+
             }
         }
 
@@ -66,11 +75,13 @@ public class PlantHarvester : MonoBehaviour
         if (interact && nearbyPlant != null && !oldKeyCollect)
         {
             Harvest();
+            firstPick = true;
         }
 
         if (interact && nearbyShop != null && !oldKeyCollect)
         {
             DropBag();
+            firstDeposit = true;
         }
 
         oldKeyCollect = interact;

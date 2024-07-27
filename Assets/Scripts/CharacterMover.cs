@@ -15,10 +15,13 @@ public class CharacterMover : MonoBehaviour
 
     Vector3 finalPos;
     Rigidbody rb;
-    bool isMoving = false;
+
+    private bool isMoving = false;
     bool isHurt = false;
 
     float hurtTimer = 0;
+
+    public bool IsMoving { get => isMoving; set => isMoving = value; }
 
     private void Awake()
     {

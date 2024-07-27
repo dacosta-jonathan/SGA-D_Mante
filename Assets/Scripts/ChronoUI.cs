@@ -11,6 +11,8 @@ public class ChronoUI: MonoBehaviour
     [SerializeField] private TextMeshProUGUI chronoText;
     private float chrono = 0;
 
+    public float Chrono { get => chrono; set => chrono = value; }
+
     private void Start()
     {
         chrono = gameManager.timeToLose;
