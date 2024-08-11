@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static AudioManager;
 
 public class AudioController : MonoBehaviour
 {
@@ -13,9 +14,17 @@ public class AudioController : MonoBehaviour
 
     public void PlayMusic(AudioManager.Songs song)
     {
-        if(manager != null)
+        if (manager != null)
         {
             manager.PlayMusic(song);
+        }
+    }
+
+    public void StopMusic()
+    {
+        if (manager != null)
+        {
+            manager.StopMusic();
         }
     }
 

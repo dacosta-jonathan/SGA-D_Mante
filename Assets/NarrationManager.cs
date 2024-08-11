@@ -82,6 +82,7 @@ public class NarrationManager : MonoBehaviour
                         audioController.PlaySound(AudioManager.Effects.Chocked);
                         break;
                     case 4:
+                        audioController.StopMusic();
                         audioController.PlaySound(AudioManager.Effects.MisterEnter);
                         break;
                     case 5:
@@ -97,6 +98,7 @@ public class NarrationManager : MonoBehaviour
                 switch (currentNarrationPhase)
                 {
                     case 0:
+                        audioController.StopMusic();
                         audioController.PlaySound(AudioManager.Effects.TalkUpM);
                         break;
                     case 1:

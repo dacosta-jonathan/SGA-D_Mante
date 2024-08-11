@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static AudioManager;
 
 public class AudioManager : MonoBehaviour
 {
@@ -29,7 +30,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip TalkUpM;
     [SerializeField] AudioClip TalkDownM;
 
-    public enum Songs{
+    public enum Songs
+    {
         MainMenu,
         Play,
         Bird,
@@ -64,9 +66,9 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        if (GameObject.FindObjectsOfType<AudioManager>().Length > 1)
+        if (FindObjectsOfType<AudioManager>().Length > 1)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
     void Start()
@@ -77,7 +79,7 @@ public class AudioManager : MonoBehaviour
         music.loop = true;
 
         Sounds = new List<AudioSource>();
-        for(int i = 0; i < numberOfSoundMax; i++)
+        for (int i = 0; i < numberOfSoundMax; i++)
         {
             Sounds.Add(gameObject.AddComponent(typeof(AudioSource)) as AudioSource);
             Sounds[i].loop = false;
@@ -103,6 +105,11 @@ public class AudioManager : MonoBehaviour
         }
         music.clip = song;
         music.Play();
+    }
+
+    public void StopMusic()
+    {
+        music.Stop();
     }
 
     public void PlaySound(Effects type)
@@ -171,7 +178,7 @@ public class AudioManager : MonoBehaviour
     private AudioSource GetSoundAudio()
     {
         AudioSource soundAudio = null;
-        foreach(AudioSource audio in Sounds)
+        foreach (AudioSource audio in Sounds)
         {
             if (!audio.isPlaying)
             {

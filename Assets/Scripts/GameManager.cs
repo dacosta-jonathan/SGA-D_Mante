@@ -8,20 +8,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int winSceneIndex = 4;
     [SerializeField] AudioController audioController;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void Win()
     {
         if (audioController != null)
         {
+            audioController.StopMusic();
             audioController.PlaySound(AudioManager.Effects.Cashing);
         }
         SceneManager.LoadScene(winSceneIndex);
@@ -31,6 +22,7 @@ public class GameManager : MonoBehaviour
     {
         if (audioController != null)
         {
+            audioController.StopMusic();
             audioController.PlaySound(AudioManager.Effects.Thunder);
         }
         SceneManager.LoadScene(gameOverSceneIndex);
