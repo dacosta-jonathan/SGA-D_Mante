@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class NarrationManager : MonoBehaviour
@@ -56,11 +56,7 @@ public class NarrationManager : MonoBehaviour
             {
                 audioController.PlayMusic(AudioManager.Songs.Play);
             }
-            if (SceneManager.GetActiveScene().buildIndex == 4)
-            {
-                audioController.PlayMusic(AudioManager.Songs.Bird);
-            }
-            
+
             SceneManager.LoadScene(nextScene);
         }
     }

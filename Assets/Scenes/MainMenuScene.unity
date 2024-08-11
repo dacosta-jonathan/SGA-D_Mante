@@ -731,8 +731,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuSong: {fileID: 8300000, guid: 74f4bd093db9e5943bcb9b480a83ce2b, type: 3}
-  PlaySong: {fileID: 8300000, guid: 4074211ebd6543c4b90f13b70e159686, type: 3}
-  Bird: {fileID: 8300000, guid: 59c9875d5a933514eb13cff8f0855bff, type: 3}
+  PlaySong: {fileID: 8300000, guid: c1812256a6a37dd4ebfb233b1e18ba29, type: 3}
+  Bird: {fileID: 8300000, guid: 8824cff681fae724ba7d2ec789f8c380, type: 3}
   ButtonPress: {fileID: 8300000, guid: 0778121659b80c140b98bffb8986bfb3, type: 3}
   ButtonStart: {fileID: 8300000, guid: db8265941abdf1a429542b1d33080b1a, type: 3}
   MenuDeplacement: {fileID: 8300000, guid: 79327c0f7ae70e142a39c7d931d771c4, type: 3}
