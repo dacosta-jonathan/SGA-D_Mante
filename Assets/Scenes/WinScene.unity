@@ -550,6 +550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuSceneIndex: 0
+  audioController: {fileID: 0}
 --- !u!4 &1000030510
 Transform:
   m_ObjectHideFlags: 0
@@ -622,10 +623,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Main Menu
+  m_text: Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f9742fe1810f962469059c792aa00575, type: 2}
+  m_sharedMaterial: {fileID: 7796191869620784712, guid: f9742fe1810f962469059c792aa00575, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -756,14 +757,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Machine (project manager) :                        \nAnne-So GANGUILLET\r\nChose
-    (game art et narration) :               \nLaureen GALSTER\r\nBidule (music, sound
-    et narration) :   \nLaureline HERZ\r\nTruc (programmation) :                                
-    \nGa\xEBtan GALLANDAT\r\nMuche (programmation) :                            \nJonathan
-    DA COSTA\r\n\n< SPECIAL THANKS TO ANNE-SO FOR THE WHITE NIGHT >"
+  m_text: "TEAM D-MANTE\r\n\r\nArt et Game Design : Anne-Sophie, Laureen Galster\r\n\nMusique
+    et Sound Design : Laureline Herz\r\n\nNarration : Laureen Galster, Laureline
+    Herz \r\n\nProgrammation : Gaetan, Jonathan\r\r\n\n< SPECIAL THANKS TO ANNE-SO
+    FOR THE WHITE NIGHT >"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f9742fe1810f962469059c792aa00575, type: 2}
+  m_sharedMaterial: {fileID: 7796191869620784712, guid: f9742fe1810f962469059c792aa00575, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
