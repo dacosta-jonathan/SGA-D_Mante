@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public float timeToLose = 10.0f;
     [SerializeField] private int gameOverSceneIndex = 3;
     [SerializeField] private int winSceneIndex = 4;
+   
     [SerializeField] AudioController audioController;
 
     public void Win()
